@@ -13,12 +13,12 @@ struct MainView: View {
                 ZStack {
                     switch selectedTab {
                     case 0:
-                       ZStack(alignment: .topLeading) {
-                           MainMap()
-                           ProfileView(user: user)
-                               .padding(.leading, 20)
-                               .padding(.top, 10)
-                       }
+                        ZStack(alignment: .topLeading) {
+                            MainMap()
+                            ProfileView(user: user)
+                                .padding(.leading, 20)
+                                .padding(.top, 10)
+                        }
                     case 1:
                         GroupView()
                     case 2:
@@ -41,7 +41,7 @@ struct MainView: View {
         .navigationBarHidden(true)
         .tint(.black)
         .navigationBarTitleDisplayMode(.inline)
-
+        
     }
 }
 
@@ -109,7 +109,7 @@ struct CustomTabBar: View {
         }
         .padding(.horizontal, 24)
         .frame(maxWidth: .infinity)
-        .background(Color.white) 
+        .background(Color.white)
     }
 }
 

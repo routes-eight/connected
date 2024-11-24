@@ -47,6 +47,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                .tint(.black)
                 .onAppear {
                     if hasImages == nil, let currentUser = authService.currentUser {
                         checkForOtherImages(userId: currentUser.id ?? "")

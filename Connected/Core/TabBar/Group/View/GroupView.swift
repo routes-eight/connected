@@ -7,16 +7,18 @@ struct GroupView: View {
     
     var body: some View {
         // 최상위 NavigationStack을 제거하고 상위에서 관리
-        VStack {
-            CustomTopBar(selectedTab: $selectedTab)
-            
-            switch selectedTab {
-            case 0:
-                GroupSearchView() // 그룹 목록을 바인딩
-            case 1:
-                MyGroupView()
-            default:
-                GroupSearchView()
+        NavigationStack {
+            VStack {
+                CustomTopBar(selectedTab: $selectedTab)
+                
+                switch selectedTab {
+                case 0:
+                    GroupSearchView() // 그룹 목록을 바인딩
+                case 1:
+                    MyGroupView()
+                default:
+                    GroupSearchView()
+                }
             }
         }
         .navigationTitle("모임")
